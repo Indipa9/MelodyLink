@@ -1,0 +1,84 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('background-image.jpg'); /* Set background image */
+    background-size: cover;
+    background-position: 50% 90%;
+    object-fit: contain;
+    background-color: #B9B096;
+
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 80vh;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Section Styling */
+.left-section {
+    flex: 0.35;
+    background-color: #B9B096;
+}
+
+.left-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+}
+
+/* Right Section Styling */
+.right-section {
+    flex: 0.75;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #B9B096;
+    opacity: 0.8; /* Adjust transparency here */
+    z-index: 1; /* Ensure the background is behind the text content */
+    padding-right: 30px;
+}
+
+.content {
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6); /* Reduced transparency overlay */
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.content h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: The Seosons;
+}
+
+.content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
