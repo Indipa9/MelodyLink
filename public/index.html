@@ -16,14 +16,21 @@
         <!-- Right Section: Background Image with Content -->
         <div class="right-section">
             <div class="content">
-                <h1>Forge a bond with your favorite artists like never before....</h1>
-                <p>Discover a platform where artists can launch new albums, connect with fans, and join vibrant communities by various genres and passion. Members enjoy exclusive music, and artists find their audience. <br>Join, create, connect!</p>
-                <img src="logo.png" alt="Woman listening to music" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
-                <p style="font-size: 12px;">~ MelodyLink ~</p>
-            
+                <h1>Your Melodies, <br> Our Passion...</h1>
+                <p>Welcome to MelodyLink! Dive into new albums across jazz, rock, indie, and pop. Explore fresh sounds, discover emerging artists, and let the rhythm move you!</p>
+                <div class="controls">
+                    <button id="prev-btn">&#9664;&#9664;</button>
+                    <button id="play-pause-btn" style="width: 50px; height: 50px; border-radius: 50%; background-color: #333; color: white; font-size: 20px; border: none; cursor: pointer;">&#9654;</button>
+                    <button id="next-btn">&#9654;&#9654;</button>
+                </div>
+                <p style="font-size: 12px;">Click Here To Listen.</p>
             </div>
         </div>
     </div>
+    <audio id="audio-player">
+        <source src="track1.mp3" type="audio/mpeg">
+    </audio>
+    <script src="script.js"></script>
 </body>
 </html>
 

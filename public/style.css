@@ -7,16 +7,11 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #B9B096;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: url('background-image.jpg'); /* Set background image */
-    background-size: cover;
-    background-position: 50% 90%;
-    object-fit: contain;
-    background-color: #B9B096;
-
 }
 
 .container {
@@ -32,7 +27,7 @@ body {
 /* Left Section Styling */
 .left-section {
     flex: 0.35;
-    background-color: #B9B096;
+    background-color: #f0f0f0;
 }
 
 .left-section img {
@@ -49,17 +44,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url('background-image.jpg'); /* Set background image */
+    background-size: cover;
+    background-position: 50% 90%;
+    object-fit: contain;
     background-color: #B9B096;
     opacity: 0.8; /* Adjust transparency here */
     z-index: 1; /* Ensure the background is behind the text content */
-    padding-right: 30px;
 }
 
 .content {
     text-align: center;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.6); /* Reduced transparency overlay */
-    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.3); /* Reduced transparency overlay */
+    padding: 60px;
     border-radius: 10px;
 }
 
@@ -82,3 +80,14 @@ body {
     gap: 15px;
 }
 
+.controls button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.controls button:hover {
+    color: #ddd;
+}
