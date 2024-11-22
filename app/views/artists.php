@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php require APPROOT. '/views/inc/components/header.php';?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
     <header>
         <div class="logo">
             <img src="logo.png" alt="MelodyLink Logo">
@@ -146,12 +137,7 @@
 
        
     </section>
-
-    <footer>
-        <p>© 2024 MelodyLink. All Rights Reserved.</p>
-    </footer>
-</body>
-
-</html>
+    
+<?php require APPROOT. '/views/inc/components/footer.php';?>
 
  
