@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: white;
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.hero-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 80px;
+    overflow: hidden;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+}
+
+.hero-content {
+    flex: 0 0 45%;
+}
+
+.animated-text {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    animation: slideUp 1s ease-out;
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #c1a860, #FFB800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 300;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 80%;
+    animation: fadeIn 1s ease-out 0.5s both;
+}
+
+.glow-button {
+    padding: 20px 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background: #c1a860;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.glow-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 51, 102, 0.3);
+}
+
+.button-arrow {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.glow-button:hover .button-arrow {
+    transform: translateX(5px);
+}
+
+/* Hero Image Section */
+.hero-image {
+    flex: 0 0 55%;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-badge {
+    position: absolute;
+    top: 15%;
+    left: 680px;
+    background: red;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(255, 51, 102, 0.3);
+}
+
+/* Product Cards */
+.floating-cards {
+    position: absolute;
+    bottom: -100px;
+    left: 150px;
+    right: 0;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-mini-card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.product-mini-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-mini-card.active {
+    border: 2px solid #c1a860;
+}
+
+.product-mini-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card-info {
+    text-align: center;
+}
+
+.product-name {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.star-rating {
+    color: #FFB800;
+}
+
+/* Product Customization */
+.product-customization {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.custom-option h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.color-picker, .size-picker {
+    display: flex;
+    gap: 15px;
+}
+
+.color-option {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.color-option.gold { background: #FFB800; }
+.color-option.black { background: #000000; }
+.color-option.red { background: #c1a860; }
+
+.color-option.active {
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px #000000;
+}
+
+.size-option {
+    width: 45px;
+    height: 45px;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.size-option:hover {
+    border-color: #c1a860;
+}
+
+.size-option.active {
+    background: #c1a860;
+    color: white;
+    border-color: #c1a860;
+}
+
+/* Reviews Box */
+.reviews-box {
+    background: white;
+    margin-bottom: 10px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.review-count {
+    color: #c1a860;
+    font-weight: bold;
+}
+
+.star-rating.large {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.text-button {
+    background: none;
+    border: none;
+    color: #000000;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Rental Section */
+.rental-section {
+    padding: 80px;
+    background: white;
+}
+
+.section-header {
+    margin-bottom: 60px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content h2 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.outline-button {
+    padding: 15px 30px;
+    border: 2px solid #000000;
+    background: transparent;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.outline-button:hover {
+    background: #000000;
+    color: white;
+}
+
+.rental-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.rental-card {
+    position: relative;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.rental-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.image-wrapper {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-wrapper img {
+    height: 100%;
+    width: auto;
+    object-fit: cover; 
+}
+
+.card-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.card-badge.hot {
+    background: linear-gradient(45deg, #c1a860);
+}
+
+.card-badge.new {
+    background: linear-gradient(45deg, #60c1a8);
+}
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.star-rating {
+    color: gold;
+    margin: 10px 0;
+}
+
+.rent-button {
+    margin-left: 15px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.rent-button:hover {
+    background: #0056b3;
+}

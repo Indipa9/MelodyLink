@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Post</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Community App</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Communities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Create Post Section -->
+    <div class="container mt-5">
+        <h2 class="text-center">Create a Post</h2>
+        <form id="postForm">
+            <!-- Post Title -->
+            <div class="mb-3">
+                <label for="postTitle" class="form-label">Post Title</label>
+                <input type="text" class="form-control" id="postTitle" placeholder="Enter your post title" required>
+            </div>
+
+            <!-- Post Content -->
+            <div class="mb-3">
+                <label for="postContent" class="form-label">Post Content</label>
+                <textarea class="form-control" id="postContent" rows="5" placeholder="Write your post here..." required></textarea>
+            </div>
+
+            <!-- Community Selection -->
+            <div class="mb-3">
+                <label for="communitySelect" class="form-label">Select Community</label>
+                <select class="form-select" id="communitySelect" required>
+                    <option value="">Choose a community</option>
+                    <option value="1">Community 1</option>
+                    <option value="2">Community 2</option>
+                    <option value="3">Community 3</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Post</button>
+            </div>
+
+            <!-- Success Message -->
+            <div id="successMessage" class="alert alert-success mt-3 d-none" role="alert">
+                Your post has been successfully created!
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
