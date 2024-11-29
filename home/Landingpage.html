@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MelodyLink - Your Music, Your World</title>
+    <link rel="stylesheet" href="stylesin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <script src="script1.js" defer></script> -->
+    </head>
+
+
+  <!-- Sticky Navbar at the Top -->
+  <nav class="navbar">
+    <div class="logoimg">
+        <img src="logo.png" alt="MelodyLink Logo">
+    </div>
+    <div class="logo">MelodyLink</div>
+    <ul class="nav-links">
+        <li><a href="../login/login.php" class="btn1">Login</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="../Music Page/music.html">Music</a></li>
+        <li><a href="../Artists Page/artists.html">Artists </a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="../merch/mercha.html">Merchandise</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section with Background Video and Controls -->
+<header class="hero">
+    <!-- Background Video -->
+    <video autoplay muted loop id="bg-video">
+     <source src="WhatsApp Video 2024-11-22 at 12.16.58_2e948031.mp4" type="video/mp4"> 
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+        <!-- <h1>Feel the Beat</h1>
+        <p>Your gateway to an endless world of music</p> -->
+        <a href="../musicplayer/index.html" class="btn">Start Listening</a>
+    </div>
+
+    <!-- Video Control Buttons -->
+    <div class="video-controls">
+        <button id="play-pause-btn"><i class="fas fa-play"></i></button>
+        <button id="mute-unmute-btn"><i class="fas fa-volume-up"></i></button>
+    </div>
+
+    <!-- Arrow Controls for Scrolling Through Image Contents -->
+    <div class="arrow-controls">
+        <button id="prev-arrow" class="arrow-btn"><i class="fas fa-chevron-left"></i></button>
+        <button id="next-arrow" class="arrow-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+</header>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const video = document.getElementById('bg-video');
+        const prevArrow = document.getElementById('prev-arrow');
+        const nextArrow = document.getElementById('next-arrow');
+
+        // List of video sources
+        const videoSources = [
+            "video1.mp4",
+            "チェンソーマンノンクレシットオーフニンク CHAINSAW MAN Opening米津玄師 KICK BACK - YouTub.mp4",
+            "video3.mp4"
+        ];
+        let currentVideoIndex = 0;
+
+        // Function to update video source
+        const updateVideoSource = () => {
+            video.src = videoSources[currentVideoIndex];
+            video.play(); // Play the new video automatically
+        };
+
+        // Event listener for the next arrow
+        nextArrow.addEventListener('click', () => {
+            currentVideoIndex = (currentVideoIndex + 1) % videoSources.length;
+            updateVideoSource();
+        });
+
+        // Event listener for the previous arrow
+        prevArrow.addEventListener('click', () => {
+            currentVideoIndex = 
+                (currentVideoIndex - 1 + videoSources.length) % videoSources.length;
+            updateVideoSource();
+        });
+    });
+</script>
+
+
+
+
+<!-- 
+Image Content Slider
+<section id="image-slider" class="image-slider">
+    <div class="slider-content">
+        <img src="event1.jpg" alt="Image 1" class="slider-image">
+        <img src="event2.png" alt="Image 2" class="slider-image">
+        <img src="event3.jpeg" alt="Image 3" class="slider-image">
+    </div>
+</section> -->
+
+<!-- Container Section with Left Image and Right Content -->
+<section class="container">
+    <div class="left-section">
+        <img src="sing.png" alt="Woman listening to music">
+    </div>
+    <div class="right-section">
+        <div class="content">
+            <h1>Forge a bond with your favorite artists like never before....</h1>
+            <p>Discover a platform where artists can launch new albums, connect with fans, and join vibrant communities by various genres and passion. Members enjoy exclusive music, and artists find their audience. <br>Join, create, connect!</p>
+            <img src="logo.png" alt="Woman listening to music" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+            <p style="font-size: 12px; font-color:white;">~ MelodyLink ~</p>
+        </div>
+    </div>
+</section>
+
+<body class="tr-body">
+    <div class="tr-container">
+      <h1 class="tr-header">
+        Convenient and Secure Ticket Reservations<br>
+        <span>At your <span class="tr-highlight">fingertips...</span></span>
+      </h1>
+      <div class="tr-carousel">
+        <div class="tr-card">
+          <img src="event1.jpg" alt="Event 1">
+          <div class="tr-button-group">
+            <button onclick="bookTicket('Rock On')">Book Ticket</button>
+          </div>
+        </div>
+        <div class="tr-card">
+          <img src="event2.png" alt="Event 2">
+          <div class="tr-button-group">
+            <button onclick="bookTicket('Tropical Vibes')">Book Ticket</button>
+          </div>
+        </div>
+        <div class="tr-card">
+          <img src="event3.jpeg" alt="Event 3">
+          <div class="tr-button-group">
+            <button onclick="bookTicket('Live Concert')">Book Ticket</button>
+          </div>
+        </div>
+        <div class="tr-card">
+          <img src="event4.png" alt="Event 4">
+          <div class="tr-button-group">
+            <button onclick="bookTicket('Live Concert')">Book Ticket</button>
+          </div>
+        </div>
+        <div class="tr-card">
+          <img src="event5.png" alt="Event 5">
+          <div class="tr-button-group">
+            <button onclick="bookTicket('Live Concert')">Book Ticket</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+
+
+
+
+<div class="container">
+    <!-- Left Section: Image -->
+    <div class="left-section">
+        <img src="sing1.png" alt="Woman listening to music">
+    </div>
+   
+    <!-- Right Section: Background Image with Content -->
+    <div class="right-section">
+        <div class="content">
+            <h1>Your Melodies, <br> Our Passion...</h1>
+            <p>Welcome to MelodyLink! Dive into new albums across jazz, rock, indie, and pop. Explore fresh sounds, discover emerging artists, and let the rhythm move you!</p>
+            <div class="controls">
+                <button id="prev-btn">&#9664;&#9664;</button>
+                <button id="play-pause-btn" style="width: 50px; height: 50px; border-radius: 50%; background-color: #333; color: white; font-size: 20px; border: none; cursor: pointer;">&#9654;</button>
+                <button id="next-btn">&#9654;&#9654;</button>
+            </div>
+            <p style="font-size: 12px;">Click Here To Listen.</p>
+        </div>
+    </div>
+</div>
+<audio id="audio-player">
+    <source src="track1.mp3" type="audio/mpeg">
+</audio>
+<script src="script.js"></script>
+<!-- 
+/*hansith*/ -->
+
+<!-- Merchandise Section -->
+<section class="hero-section1">
+    <div class="content-wrapper">
+        <div class="hero-content">
+            <h1 class="animated-text">
+                CHOOSE YOUR
+                <span class="gradient-text">FAVORITE</span>
+                COLLECTION
+            </h1>
+            <p class="hero-description">Experience premium quality fashion that defines your musical journey. Each piece is crafted for performers who demand the extraordinary.</p>
+            <button class="glow-button">
+                Buy Now
+                <span class="button-arrow">→</span>
+            </button>
+        </div>
+
+        <div class="hero-image">
+            <div class="image-container">
+                <div class="floating-badge">NEW</div>
+                <img src="entertainment.jpg" alt="Featured Product">
+            </div>
+            
+            <div class="floating-cards">
+                <div class="product-mini-card">
+                    <img src="leather.jpg" alt="Product 1">
+                    <div class="card-info">
+                        <span class="product-name">Vintage Leather</span>
+                        <div class="star-rating">★★★★★</div>
+                    </div>
+                </div>
+                <div class="product-mini-card active">
+                    <img src="classic.jpg" alt="Product 2">
+                    <div class="card-info">
+                        <span class="product-name">Classic Edition</span>
+                        <div class="star-rating">★★★★★</div>
+                    </div>
+                </div>
+                <div class="product-mini-card">
+                    <img src="premium.jpg" alt="Product 3">
+                    <div class="card-info">
+                        <span class="product-name">Premium Series</span>
+                        <div class="star-rating">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-customization">
+        <div class="custom-option">
+            <h3>COLOR</h3>
+            <div class="color-picker">
+                <button class="color-option gold"></button>
+                <button class="color-option black active"></button>
+                <button class="color-option red"></button>
+            </div>
+        </div>
+
+        <div class="custom-option">
+            <h3>SIZE</h3>
+            <div class="size-picker">
+                <button class="size-option">M</button>
+                <button class="size-option active">L</button>
+                <button class="size-option">XL</button>
+            </div>
+        </div>
+
+        <div class="reviews-box">
+            <div class="review-header">
+                <h3>REVIEWS</h3>
+                <span class="review-count">3556+</span>
+            </div>
+            <p class="review-text">Trusted customers</p>
+            <div class="star-rating large">★★★★★</div>
+            <button class="text-button">Read More</button>
+        </div>
+    </div>
+</section>
+
+<!-- Rental Equipment Section -->
+<section class="rental-section">
+    <div class="section-header">
+        <div class="header-content">
+            <h2>PREMIUM EQUIPMENT
+                <span class="gradient-text">FOR RENT</span>
+            </h2>
+            <button class="outline-button">
+                View Collection
+                <span class="button-arrow">→</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="rental-grid">
+        <div class="rental-card">
+            <div class="card-badge hot">HOT</div>
+            <div class="image-wrapper">
+                <img src="microphone.jpg" width="300px" alt="Professional Microphone">
+                <div class="hover-overlay"></div>
+            </div>
+            <div class="card-content">
+                <h3>Professional Microphone</h3>
+                <div class="star-rating">★★★★★</div>
+                <button class="rent-button">Rent Now</button>
+            </div>
+        </div>
+
+        <div class="rental-card featured">
+            <div class="card-badge new">NEW</div>
+            <div class="image-wrapper">
+                <img src="dj.jpg" alt="DJ Controller">
+                <div class="hover-overlay"></div>
+            </div>
+            <div class="card-content">
+                <h3>Premium DJ Controller</h3>
+                <div class="star-rating">★★★★★</div>
+                <button class="rent-button">Rent Now</button>
+            </div>
+        </div>
+
+        <div class="rental-card">
+            <div class="image-wrapper">
+                <img src="speaker.jpg" alt="Speaker System">
+                <div class="hover-overlay"></div>
+            </div>
+            <div class="card-content">
+                <h3>Professional Speakers</h3>
+                <div class="star-rating">★★★★★</div>
+                <button class="rent-button">Rent Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<footer>
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-about">
+            <h4>About MelodyLink</h4>
+            <p>MelodyLink is an innovative web application designed to revolutionize theway we engage with music by offering a comprehensive, all-in-one platformfor artists, fans, event organizers, merchandise vendors and eventequipment renters.</p>
+            <img src="logo.png" alt="MelodyLink Logo">
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#artists">Music</a></li>
+                <li><a href="#artists">Artists</a></li>
+                <li><a href="#albums">Events</a></li>
+                <li><a href="#genres">Store</a></li>
+                <li><a href="#artists">Communities</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+        
+        <!-- Social Media Section -->
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright Section -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 MelodyLink. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    const scrollLink = document.querySelector('.scroll-link');
+    const secondSection = document.getElementById('second-section');
+  
+    scrollLink.addEventListener('click', () => {
+      secondSection.scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
