@@ -1,0 +1,157 @@
+<?php
+session_start(); // Start the session
+
+// Check if the user is logged in
+if (!isset($_SESSION['member_id'])) {
+    header("Location: login.php");
+    exit;
+}
+
+// Connect to the database
+$servername = "localhost";
+$username = "root"; // Your DB credentials
+$password = "";
+$dbname = "melodylink";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check the connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Get the community ID from the URL
+$community_id = $_GET['id'];
+
+// Fetch the community details
+$stmt = $conn->prepare("SELECT * FROM communities WHERE id = ?");
+$stmt->bind_param("i", $community_id);
+$stmt->execute();
+$community = $stmt->get_result()->fetch_assoc();
+
+// Fetch posts for this community
+$stmt_posts = $conn->prepare("SELECT p.*, m.Username FROM posts p JOIN members m ON p.member_id = m.member_id WHERE p.community_id = ? ORDER BY p.created_at DESC");
+$stmt_posts->bind_param("i", $community_id);
+$stmt_posts->execute();
+$posts_result = $stmt_posts->get_result();
+
+$posts = [];
+if ($posts_result->num_rows > 0) {
+    while ($post = $posts_result->fetch_assoc()) {
+        $posts[] = $post;
+    }
+}
+
+// Handle new post submission
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $content = $_POST['content'];
+    $member_id = $_SESSION['member_id'];
+
+    if (!empty($content)) {
+        $stmt_post = $conn->prepare("INSERT INTO posts (content, member_id, community_id, created_at) VALUES (?, ?, ?, NOW())");
+        $stmt_post->bind_param("sii", $content, $member_id, $community_id);
+        $stmt_post->execute();
+
+        // Redirect to avoid form resubmission
+        header("Location: community.php?id=$community_id");
+        exit;
+    } else {
+        $error_message = "Post content cannot be empty.";
+    }
+}
+
+$conn->close();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo htmlspecialchars($community['name']); ?> - MelodyLink</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .post {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .post h4 {
+            margin: 0;
+            color: #0079d3;
+        }
+        .post-content {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+        .post-form {
+            margin-top: 20px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .submit-button {
+            background-color: #0079d3;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .submit-button:hover {
+            background-color: #005fa3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2><?php echo htmlspecialchars($community['name']); ?></h2>
+        <p><?php echo htmlspecialchars($community['description']); ?></p>
+
+        <h3>Posts</h3>
+        <?php if (count($posts) > 0): ?>
+            <?php foreach ($posts as $post): ?>
+                <div class="post">
+                    <h4><?php echo htmlspecialchars($post['Username']); ?></h4>
+                    <p class="post-content"><?php echo htmlspecialchars($post['content']); ?></p>
+                    <small>Posted on: <?php echo date('Y-m-d H:i', strtotime($post['created_at'])); ?></small>
+                </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <p>No posts yet. Be the first to post!</p>
+        <?php endif; ?>
+
+        <div class="post-form">
+            <h3>Create a Post</h3>
+            <?php if (isset($error_message)): ?>
+                <p style="color:red;"><?php echo $error_message; ?></p>
+            <?php endif; ?>
+            <form action="community.php?id=<?php echo $community_id; ?>" method="POST">
+                <textarea name="content" rows="5" placeholder="What's on your mind?" required></textarea>
+                <button type="submit" class="submit-button">Post</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
