@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .admin-page {
+    display: flex;
+    height: 100vh;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0.5px;
+    z-index: 10;
+  }
+.profile-icon .profile-image {
+    width: 50px;
+    height: auto;
+    padding-right: 50px;
+}
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-image {
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "The Seasons";
+  }
+  
+  
+  aside {
+    background-color: #9d9b9a;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 5;
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+  }
+  
+  .sidebar-menu li {
+    margin: 20px 0;
+  }
+  
+  .icon {
+    font-size: 24px;
+  }
+  
+  main {
+    flex: 1;
+    margin-left: 60px;
+    margin-top: 60px;
+    padding: 20px;
+    background-color: #B9B096;
+  }
+  
+  main h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+  }
+  
+  .user-table th,
+  .user-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .user-table th {
+    background-color: #6e665f;
+    color: #fff;
+  }
+  
+  .user-table td button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .user-table .verify {
+    background-color: #78bdf2;
+  }
+  
+  .user-table .accept {
+    background-color: #4caf50;
+  }
+  
+  .user-table .decline {
+    background-color: #f44336;
+  }
+  
+  .user-table .view-profile {
+    background-color: #4d91c6;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
