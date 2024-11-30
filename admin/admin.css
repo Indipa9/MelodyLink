@@ -4,60 +4,55 @@ body {
     padding: 0;
   }
   
-  .admin-page {
-    display: flex;
-    height: 100vh;
-  }
-  
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0.5px;
-    z-index: 10;
-  }
-.profile-icon .profile-image {
-    width: 50px;
-    height: auto;
-    padding-right: 50px;
-}
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo-image {
-    height: 50px;
-    margin-right: 10px;
-  }
-  
-  .logo-text {
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-family: "The Seasons";
-  }
-  
+ 
   
   aside {
-    background-color: #9d9b9a;
+    background-color: #c6cdea;
     width: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 80px;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     height: 100%;
-    z-index: 5;
+    z-index: 4;
+    margin-top: 80px;
+    margin-bottom: 10px;
   }
+  .header {
+    background-color: #617dff;
+    color: #fff;
+    padding: 0.7rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  
+  
+  .header .logo img {
+      width: 50px;
+      height: auto;
+  }
+  
+  .header .logo h1 {
+      font-family:'Higuen Elegant Serif';
+      margin-left: 10px;
+      font-size: 24px;
+      color: #fff;
+  }
+    
+  .header .logo {
+      display: flex;
+      align-items: center;
+  }
+  .header .profile-icon img {
+      width: 50px;
+      height: auto;
+  }
+
   
   .sidebar-menu {
     list-style: none;
@@ -74,12 +69,11 @@ body {
     font-size: 24px;
   }
   
-  main {
+main {
     flex: 1;
-    margin-left: 60px;
-    margin-top: 60px;
+    margin-left: 70px; /* Adjusted to match the width of the aside */
     padding: 20px;
-    background-color: #B9B096;
+    background-color: white;
   }
   
   main h1 {
@@ -101,7 +95,7 @@ body {
   }
   
   .user-table th {
-    background-color: #6e665f;
+    background-color: #8b9ff8;
     color: #fff;
   }
   
@@ -130,7 +124,7 @@ body {
   }
   
   footer {
-    background-color: #333;
+    background-color: #617dff;
     color: #fff;
     text-align: center;
     padding: 5px;
@@ -138,5 +132,6 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 40px;
   }
   
