@@ -5,7 +5,7 @@ session_start(); // Start the session
 $servername = "localhost";
 $username = "root"; // Use your DB credentials
 $password = "";
-$dbname = "melodylink"; // Your database name
+$dbname = "Melodylink"; // Your database name
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 

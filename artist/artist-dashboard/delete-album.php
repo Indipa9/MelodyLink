@@ -1,10 +1,11 @@
 <?php
 include './includes/connect.php';
-if (!isset($_GET['album_id'])) {
+
+if (!isset($_POST['album_id'])) {
     echo "album id is not provided";
     exit;
 }
-$album_id = $_GET['album_id'];
+$album_id = $_POST['album_id'];
 
 $sql = "DELETE FROM albums WHERE album_id = :album_id";
 $stmt = $conn->prepare($sql);
@@ -16,6 +17,4 @@ try {
 } catch(PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
-
-
 ?>
