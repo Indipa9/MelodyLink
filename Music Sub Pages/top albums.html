@@ -9,95 +9,160 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <div class="logo">
-            <img src="./assets/logo.png" alt="MelodyLink Logo">
-            <h1>MelodyLink</h1>
+          <img src="./assets/logo.png" alt="MelodyLink Logo">
+          <h1>MelodyLink</h1>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">All</a></li>
-                <li><a href="#">Trending Now</a></li>
-                <li><a href="#">New Releases</a></li>
-                <li><a href="#">Moods & Genre</a></li>
-                <li><a href="#">Top Albums</a></li>
-                <li><a href="#">Top Artists</a></li>
-                <li><a href="#">My Music</a></li>
-            </ul>
-        </nav>
+    <nav class="navbar">
+          <a href="Home.html">Home</a>
+          <a href="TrendingNow.html">Trending Now</a>
+          <a href="NewReleases.html">New Releases</a>
+          <a href="Moods & Genre.html">Moods & Genre</a>
+          <a href="Top albums.html" class="logout">Top Albums</a>
+          <a href="Top artists.html" class="logout">Top Artists</a>
+          <a href="Member Profile.html" class="logout">My Music</a>
+    </nav>
         <div class="profile-icon">
-            <img src="./assets/profile-icon.png" alt="Profile Icon">
-        </div>
+          <img src="./assets/profile-icon.png" alt="Profile Icon">
+      </div>
     </header>
 
     <section class="search-bar">
-        <input type="text" placeholder="Search for Albums, Artist, and Genres">
+        <input type="text" placeholder="Search for Albums, Artists, and Genres">
         <button><img src="./assets/search-icon.png" alt="Search"></button>
     </section>
 
-    <!-- Top Albums Section in List Format -->
     <section class="album-list">
-        <div class="album-item">
-            <img src="album1.png" alt="Album 1" class="album-cover">
-            <div class="album-info">
-                <h3 class="album-title">Album 1</h3>
-                <p class="album-artist">Artist: Artist 1</p>
-                <p class="album-genre">Genre: Pop</p>
-                <p class="album-release-date">Release Date: Jan 15, 2024</p>
+            <div class="album-item">
+                <img src="./assets/sandaganawa.jpg" alt="Album 2" class="album-cover">
+                <div class="album-info">
+                    <h3 class="album-title">Sandaganawa</h3>
+                    <p class="album-artist">Artist: Dhanith Sri</p>
+                    <p class="album-genre">Genre: Sinhala Pop / Ballad</p>
+                    <p class="album-release-date">Release Date: Feb 10, 2024</p>
+                    <p class="album-description">
+                        A heartfelt melody blending traditional rhythms with deep emotional lyrics. Featuring the evocative track *"Sandaganawa"*                 </p>
+                    <div class="ratings">⭐⭐⭐⭐☆ (4.5/5) - 120 reviews</div>
+                    <div class="promo">
+                        <p>🎉 Limited-Time Offer: 10% off on pre-orders!</p>
+                    </div>
+                </div>
                 <button class="listen-now">Listen Now</button>
-            </div>
-        </div>
+            </div>       
 
-        <div class="album-item">
-            <img src="album2.png" alt="Album 2" class="album-cover">
-            <div class="album-info">
-                <h3 class="album-title">Album 2</h3>
-                <p class="album-artist">Artist: Artist 2</p>
-                <p class="album-genre">Genre: Jazz</p>
-                <p class="album-release-date">Release Date: Feb 10, 2024</p>
+            <div class="album-item">
+                <img src="./assets/sansarini.jpeg" alt="Album 2" class="album-cover">
+                <div class="album-info">
+                    <h3 class="album-title">Sansarini</h3>
+                    <p class="album-artist">Artist: Yasas Madagedara</p>
+                    <p class="album-genre">Genre: Sinhala Folk / Love Ballad</p>
+                    <p class="album-release-date">Release Date: Feb 10, 2024</p>
+                    <p class="album-description">
+                        A timeless ballad capturing the essence of love and longing, with the unforgettable tune *"Sansarini"*
+                    </p>
+                    <div class="ratings">⭐⭐⭐⭐☆ (4.5/5) - 120 reviews</div>
+                    <div class="promo">
+                        <p>🎉 Limited-Time Offer: 10% off on pre-orders!</p>
+                    </div>
+                </div>
                 <button class="listen-now">Listen Now</button>
             </div>
-        </div>
 
-        <div class="album-item">
-            <img src="album3.png" alt="Album 3" class="album-cover">
-            <div class="album-info">
-                <h3 class="album-title">Album 3</h3>
-                <p class="album-artist">Artist: Artist 3</p>
-                <p class="album-genre">Genre: Rock</p>
-                <p class="album-release-date">Release Date: Mar 5, 2024</p>
+            <div class="album-item">
+                <img src="./assets/sandanari3.jpg" alt="Album 2" class="album-cover">
+                <div class="album-info">
+                    <h3 class="album-title">Sandanari</h3>
+                    <p class="album-artist">Artist: Harsha Withanage</p>
+                    <p class="album-genre">Genre: Sinhala Pop / Romantic</p>
+                    <p class="album-release-date">Release Date: Feb 10, 2024</p>
+                    <p class="album-description">
+                        A powerful fusion of soulful vocals and captivating beats. Experience the emotional journey with *"Sandanari"*
+                    </p>
+                    <div class="ratings">⭐⭐⭐⭐☆ (4.5/5) - 120 reviews</div>
+                    <div class="promo">
+                        <p>🎉 Limited-Time Offer: 10% off on pre-orders!</p>
+                    </div>
+                </div>
                 <button class="listen-now">Listen Now</button>
             </div>
-        </div>
 
-        <div class="album-item">
-            <img src="album4.png" alt="Album 4" class="album-cover">
-            <div class="album-info">
-                <h3 class="album-title">Album 4</h3>
-                <p class="album-artist">Artist: Artist 4</p>
-                <p class="album-genre">Genre: Classical</p>
-                <p class="album-release-date">Release Date: Apr 1, 2024</p>
+            <div class="album-item">
+                <img src="./assets/unuhuma2.jpg" alt="Album 2" class="album-cover">
+                <div class="album-info">
+                    <h3 class="album-title">Unuhuma 2</h3>
+                    <p class="album-artist">Artist: Tehan Perera</p>
+                    <p class="album-genre">Genre: Sinhala Pop / Modern</p>
+                    <p class="album-release-date">Release Date: Feb 10, 2024</p>
+                    <p class="album-description">
+                        A mesmerizing mix of modern and classic sounds, featuring the standout track *"Unuhuma 2"*
+                    </p>
+                    <div class="ratings">⭐⭐⭐⭐☆ (4.5/5) - 120 reviews</div>
+                    <div class="promo">
+                        <p>🎉 Limited-Time Offer: 10% off on pre-orders!</p>
+                    </div>
+                </div>
                 <button class="listen-now">Listen Now</button>
             </div>
-        </div>
 
-        <div class="album-item">
-            <img src="album5.png" alt="Album 5" class="album-cover">
-            <div class="album-info">
-                <h3 class="album-title">Album 5</h3>
-                <p class="album-artist">Artist: Artist 5</p>
-                <p class="album-genre">Genre: Hip-hop</p>
-                <p class="album-release-date">Release Date: May 18, 2024</p>
+            <div class="album-item">
+                <img src="./assets/pandama.jpg" alt="Album 2" class="album-cover">
+                <div class="album-info">
+                    <h3 class="album-title">Pandama</h3>
+                    <p class="album-artist">Artist: Dhanith Sri</p>
+                    <p class="album-genre">Genre: Sinhala Dance / Contemporary</p>
+                    <p class="album-release-date">Release Date: Feb 10, 2024</p>
+                    <p class="album-description">
+                        "An energetic and vibrant track that brings together rich melodies and bold rhythms, highlighted by *"Pandama"*
+                    </p>
+                    <div class="ratings">⭐⭐⭐⭐☆ (4.5/5) - 120 reviews</div>
+                    <div class="promo">
+                        <p>🎉 Limited-Time Offer: 10% off on pre-orders!</p>
+                    </div>
+                </div>
                 <button class="listen-now">Listen Now</button>
             </div>
-        </div>
     </section>
 
     <footer>
-        <p>© Copyright. All rights reserved.</p>
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-about">
+                <h4>About MelodyLink</h4>
+                <p>MelodyLink is an innovative web application designed to revolutionize theway we engage with music by offering a comprehensive, all-in-one platformfor artists, fans, event organizers, merchandise vendors and eventequipment renters.</p>
+                <img src="./assets/logo.png" alt="MelodyLink Logo">
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#artists">Music</a></li>
+                    <li><a href="#artists">Artists</a></li>
+                    <li><a href="#albums">Events</a></li>
+                    <li><a href="#genres">Store</a></li>
+                    <li><a href="#artists">Communities</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <!-- Social Media Section -->
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="./assets/fb.jpg" alt="Facebook"></a>
+                    <a href="#"><img src="./assets/tw.jpg" alt="Twitter"></a>
+                    <a href="#"><img src="./assets/inst.jpg" alt="Instagram"></a>
+                    <a href="#"><img src="./assets/yt.jpg" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 MelodyLink. All Rights Reserved.</p>
+        </div>
     </footer>
-
-    <script src="top-albums.js"></script>
 </body>
 
 </html>

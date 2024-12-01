@@ -6,55 +6,51 @@
 }
 
 body {
-    background-color: #B9B096;
+    background-color: white;
     color: #333;
 }
 
-header {
+.header {
+    background-color: #617dff;
+    color: #fff;
+    padding: 0.5rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #4e433f;
-    border-bottom: 2px solid #ccc;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 50px;
-    height: auto;
-}
-
-.logo h1 {
-    font-family:'Higuen Elegant Serif';
-    margin-left: 10px;
-    font-size: 24px;
-    color: #fff;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #e6d9c3;
-    font-size: 18px;
-}
-
-.profile-icon img {
-    width: 50px;
-    height: auto;
-}
+    flex-shrink: 0;
+  }
+  
+  
+  .header .logo img {
+      width: 50px;
+      height: auto;
+  }
+  
+  .header .logo h1 {
+      font-family:'Higuen Elegant Serif';
+      margin-left: 10px;
+      font-size: 24px;
+      color: #fff;
+  }
+    
+  .header .logo {
+      display: flex;
+      align-items: center;
+  }
+  .header .profile-icon img {
+      width: 50px;
+      height: auto;
+  }
+  .navbar a {
+      margin: 0 1rem;
+      color: #fff;
+      text-decoration: none;
+      font-size: 19px;
+  }
+  
+  .navbar a:hover {
+      text-decoration: underline;
+  }
 
 .search-bar {
     display: flex;
@@ -72,7 +68,7 @@ nav ul li a {
 
 .search-bar button {
     padding: 10px;
-    background-color: #8c877a;
+    background-color: #a5b4f8;
     border: none;
     border-radius: 0 5px 5px 0;
 }
@@ -82,174 +78,76 @@ nav ul li a {
     height: auto;
 }
 
-.new_release, .moods{
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 0px;
-    font-family: 'Arial', sans-serif;
-}
-
-.album-cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 30px auto;
-    width: 95%;
-    }
-
-.card {
-    background-color: #f7f2e7;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    text-align: center;
-    margin: 10px;
-    width: 250px;
-    position: relative;
-}
-
-.card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.card h3 {
-    margin: 10px 0 5px;
-}
-
-.card p {
-    color: #777;
-    font-size: 14px;
-}
-
-.music-icon {
-    position: absolute;
-    bottom: 20px;
-    left: 15px;
-}
-
-.music-icon img {
-    width: 20px;
-    height: auto;
-}
-
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #4e433f;
-    text-align: center;
-    padding: 10px 0;
-    color: #e6d9c3;
-}
-
-.featured-trending {
-    display: flex;
-    justify-content: space-around;
-    margin: 30px 0;
-}
-
-.featured-album {
-    width: 45%;
-    background-color: #f7f2e7;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-}
-
-.featured-album img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.trending-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    margin: 20px;
-}
-
-.trending-album {
-    background-color: #f7f2e7;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.trending-album img {
-    width: 100%;
-    border-radius: 5px;
-}
-
-.trending-album h4 {
-    margin: 10px 0 5px;
-}
-
-.trending-album p {
-    color: #777;
-    font-size: 14px;
-}
-
-
-
-
 .artist-list {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap;  /* Allow wrapping to the next line */
+    gap: 30px;
     padding: 20px;
-    max-width: 1200px;
     margin: 0 auto;
+    max-width: 1200px;
 }
 
 .artist-item {
-    display: flex;
-    align-items: center;
     background-color: #f7f2e7;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 15px;
+    text-align: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    flex: 1 1 250px;  /* Flex item with a minimum width of 250px */
 }
 
 .artist-item:hover {
     transform: translateY(-5px);
+    background-color: #8c877a;
 }
 
-.artist-photo {
-    width: 120px;
-    height: auto;
+.artist-image-container {
+    height: 200px;
+    overflow: hidden;
     border-radius: 10px;
-    margin-right: 20px;
+    margin-bottom: 15px;
 }
 
-.artist-info {
-    display: flex;
-    flex-direction: column;
+.artist-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .artist-name {
-    font-size: 22px;
-    margin: 5px 0;
+    font-size: 20px;
+    margin: 10px 0;
+    color: black;
+    font-weight: bold;
 }
 
-.artist-genre {
-    color: #777;
-    font-size: 16px;
-    margin-bottom: 10px;
+.artist-genre, .artist-albums {
+    font-size: 14px;
+    color: #e6d9c3;
+    margin: 5px 0;
 }
 
 .artist-bio {
     font-size: 14px;
-    color: #555;
-    line-height: 1.4;
-    margin-bottom: 15px;
+    color: #ccc;
+    margin: 10px 0;
 }
 
-.view-more {
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.social-icon img {
+    width: 25px;
+    height: 25px;
+}
+
+.follow-button {
     padding: 8px 15px;
     background-color: #4e433f;
     color: #e6d9c3;
@@ -258,8 +156,91 @@ footer {
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
-.view-more:hover {
+.follow-button:hover {
     background-color: #333;
 }
+
+footer {
+    background-color: #617dff; 
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Make it responsive */
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-about,
+  .footer-links,
+  .footer-social {
+    flex: 1;
+    min-width: 200px; /* Ensures proper spacing on small screens */
+  }
+  
+  .footer-about p,
+  .footer-links ul,
+  .footer-social h4 {
+    margin-bottom: 15px;
+  }
+  
+  .footer-about img {
+    width: 100px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 15px; /* Space between the text and logo */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+    transition: transform 0.3s, opacity 0.3s; /* Smooth hover effect */
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #FFD700; /* Highlight on hover */
+  }
+  
+  .footer-social .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-social a img {
+    width: 25px;
+    height: 25px;
+     /* filter: invert(100%); Ensures icons are visible on dark background */
+    transition: transform 0.3s;
+  }
+  
+  .footer-social a:hover img {
+    transform: scale(1.2); /* Enlarge on hover */
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+  }
