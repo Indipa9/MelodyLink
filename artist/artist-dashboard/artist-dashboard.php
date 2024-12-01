@@ -1,4 +1,5 @@
 <?php
+
 include './includes/connect.php';
 
 // Fetch albums for the artist
@@ -260,4 +261,23 @@ function editAlbum(albumId) {
     }
 }
 </script>
-
+<script>
+function validateAlbumData($albumData) {
+    $errors = [];
+    
+    if (empty($albumData['album_name'])) {
+        $errors[] = "Album name is required";
+    }
+    
+    if (empty($albumData['release_date'])) {
+        $errors[] = "Release date is required";
+    }
+    
+    if (empty($albumData['artist_id'])) {
+        $errors[] = "Artist ID is required";
+    }
+    
+    return $errors;
+} 
+</script>
+?>

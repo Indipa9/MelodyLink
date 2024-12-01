@@ -471,3 +471,12 @@ footer {
 .submit-btn:hover {
     background-color: #a6b5f7;
 }
+.error-message {
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+#add-album-form input.error,
+#add-album-form select.error {
+  border-color: red;
+}
