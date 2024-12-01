@@ -1,7 +1,7 @@
 <?php
 // Database connection settings
 $host = 'localhost';
-$dbname = 'MelodyLink';
+$dbname = 'melodyLink';
 $username = 'root';
 $password = '';
 

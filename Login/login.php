@@ -5,7 +5,7 @@ session_start(); // Start the session
 $servername = "localhost";
 $username = "root"; // Use your DB credentials
 $password = "";
-$dbname = "melodylink"; // Your database name
+$dbname = "Melodylink"; // Your database name
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -22,9 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $tables = [
         'admin' => 'admin_id',
         'member' => 'member_id',
-        'supplier' => 'user_id',
-        'event_organiser' => 'user_id',
-        'artist' => 'user_id'
+        'supplier' => 'supplier_id',
+        'event_organiser' => 'organizer_id',
+        'artist' => 'Artist_id'
     ];
 
     $login_successful = false;
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         header("Location: ../org/eventm/public/index.php");
                         break;
                     case 'artist':
-                        header("Location: ../artist/artist-dashboard/artist-dashboard.html");
+                        header("Location: ../artist-dashboard/artist-dashboard.php");
                         break;
                 }
                 exit;

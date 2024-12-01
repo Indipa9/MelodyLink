@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artists</title>
-    <link rel="stylesheet" href="artists.css">
+    <link rel="stylesheet" href="artists.css?v=1.0">
 </head>
 <body>
     <header>
@@ -14,13 +14,12 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">All</a></li>
+                <li><a href="../home/Landingpage.html">Home</a></li>
                 <li><a href="#">A-Z</a></li>
                 <li><a href="#">Most Popular</a></li>
                 <li><a href="#">New Releases</a></li>
-                <li><a href="#">Genre</a></li>
-                <li><a href="#">Top Albums</a></li>
-                <li><a href="#">Communities</a></li>
+                <li><a href="./sub pages/Genre.html">Genre</a></li>
+                <li><a href="../artist/artist-dashboard/sub parts/Communities.html">Communities</a></li>
             </ul>
         </nav>
         <div class="profile-icon">
@@ -29,11 +28,10 @@
     </header>
 
     <main>
-        
-
+       
         <section class="search-bar">
-            <input type="text" placeholder="Search for Albums, Artist, and Genres">
-            <button><img src="search-icon.png" alt="Search"></button>
+            <input type="text" id="artistSearch" placeholder="Search for Albums, Artist, and Genres">
+            <button onclick="searchArtists()"><img src="search-icon.png" alt="Search"></button>
         </section>
 
         <section class="most-popular">
@@ -89,9 +87,9 @@
                     </div>
                 </div>
                 <div class="artist-card">
-                    <img src="artist7.png" alt="Kanchana Anuradhi">
+                    <img src="danith.jpg" alt="Dhanith Sri">
                     <div class="artist-name">
-                        <p>Umaria Sinhawansa</p>
+                        <p>Dhanith Sri</p>
                     </div>
                 </div>
                 <div class="artist-card">
@@ -105,8 +103,62 @@
     </main>
 
     <footer>
-        <p>© Copyright. All rights reserved.</p>
-    </footer>
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-about">
+                <h4>About MelodyLink</h4>
+                <p>MelodyLink is an innovative web application designed to revolutionize theway we engage with music by offering a comprehensive, all-in-one platformfor artists, fans, event organizers, merchandise vendors and eventequipment renters.</p>
+                <img src="logo.png" alt="MelodyLink Logo">
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#artists">Music</a></li>
+                    <li><a href="#artists">Artists</a></li>
+                    <li><a href="#albums">Events</a></li>
+                    <li><a href="#genres">Store</a></li>
+                    <li><a href="#artists">Communities</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <!-- Social Media Section -->
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 MelodyLink. All Rights Reserved.</p>
+        </div>
+    </footer> 
+    <script>
+        function searchArtists() {
+            const searchInput = document.getElementById('artistSearch').value.toLowerCase();
+            const artistCards = document.querySelectorAll('.artist-card');
+        
+            artistCards.forEach(card => {
+                const artistName = card.querySelector('.artist-name p').textContent.toLowerCase();
+                if (artistName.includes(searchInput)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+        
+        // Real-time search as user types
+        document.getElementById('artistSearch').addEventListener('keyup', searchArtists);
+        </script>
 </body>
 </html>
 

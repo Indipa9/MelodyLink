@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music</title>
-    <link rel="stylesheet" href="music.css">
+    <link rel="stylesheet" href="music.css?v=1.0">
 </head>
 
 <body>
@@ -17,11 +17,12 @@
         <nav>
             <ul>
                 <li><a href="#">All</a></li>
-                <li><a href="../Music Sub Pages/TrendingNow.html">Trending Now</a></li>
-                <li><a href="../Music Sub Pages/NewReleases.html">New Releases</a></li>
-                <li><a href="../Music Sub Pages/Moods & Genre.html">Moods & Genre</a></li>
-                <li><a href="../Music Sub Pages/top albums.html">Top Albums</a></li>
-                <li><a href="../Music Sub Pages/top artists.html">Top Artists</a></li>
+                <li><a href="../home/Landingpage.html">Home</a></li>
+                <li><a href="#">Trending Now</a></li>
+                <li><a href="#">New Releases</a></li>
+                <li><a href="#">Moods & Genre</a></li>
+                <li><a href="#">Top Albums</a></li>
+                <li><a href="#">Top Artists</a></li>
                 <li><a href="#">My Music</a></li>
             </ul>
         </nav>
@@ -29,12 +30,12 @@
             <img src="profile-icon.png" alt="Profile Icon">
         </div>
     </header>
-
-    <section class="search-bar">
-        <input type="text" placeholder="Search for Albums, Artist, and Genres">
-        <button><img src="search-icon.png" alt="Search"></button>
-    </section>
-
+      <section class="search-bar">
+          <form id="searchForm" onsubmit="searchMusic(event)">
+              <input type="text" id="searchInput" placeholder="Search for Albums, Artist, and Genres">
+              <button type="submit"><img src="search-icon.png" alt="Search"></button>
+          </form>
+      </section>
     <section class="album-cards">
         <div class="card">
             <img src="nadagam-geeya.png" alt="Nadagam Geeya">
@@ -146,12 +147,65 @@
 
        
     </section>
+<footer>
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-about">
+            <h4>About MelodyLink</h4>
+            <p>MelodyLink is an innovative web application designed to revolutionize theway we engage with music by offering a comprehensive, all-in-one platformfor artists, fans, event organizers, merchandise vendors and eventequipment renters.</p>
+            <img src="logo.png" alt="MelodyLink Logo">
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#artists">Music</a></li>
+                <li><a href="#artists">Artists</a></li>
+                <li><a href="#albums">Events</a></li>
+                <li><a href="#genres">Store</a></li>
+                <li><a href="#artists">Communities</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+        
+        <!-- Social Media Section -->
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright Section -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 MelodyLink. All Rights Reserved.</p>
+    </div>
+</footer> 
 
-    <footer>
-        <p>© 2024 MelodyLink. All Rights Reserved.</p>
-    </footer>
-</body>
+ <script>
+ function searchMusic(event) {
+     event.preventDefault();
+     const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+     const cards = document.querySelectorAll('.album-cards .card');
+     
+     cards.forEach(card => {
+         const title = card.querySelector('h3').textContent.toLowerCase();
+         const artist = card.querySelector('p').textContent.toLowerCase();
+         
+         if (title.includes(searchTerm) || artist.includes(searchTerm)) {
+             card.style.display = 'block';
+         } else {
+             card.style.display = 'none';
+         }
+     });
+ }
+ </script>
+ </body>
 
-</html>
-
+ </html>
  
