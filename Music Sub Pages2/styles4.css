@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: white;
+    color: #333;
+}
+
+header {
+    background-color: #617dff;
+    color: #fff;
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  
+  
+  .header .logo img {
+      width: 50px;
+      height: auto;
+  }
+  
+  .header .logo h1 {
+      font-family:'Higuen Elegant Serif';
+      margin-left: 10px;
+      font-size: 24px;
+      color: #fff;
+  }
+    
+  .header .logo {
+      display: flex;
+      align-items: center;
+  }
+  .header .profile-icon img {
+      width: 50px;
+      height: auto;
+  }
+  .navbar a {
+      margin: 0 1rem;
+      color: #fff;
+      text-decoration: none;
+      font-size: 19px;
+  }
+  
+  .navbar a:hover {
+      text-decoration: underline;
+  }
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-bar input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: #a5b4f8;
+    border: none;
+    border-radius: 0 5px 5px 0;
+}
+
+.search-bar button img {
+    width: 20px;
+}
+
+.album-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.album-item {
+    display: flex;
+    align-items: flex-start; /* Aligns items at the top */
+    background-color: #f7f2e7;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    gap: 15px; /* Adds spacing between elements */
+}
+
+.album-cover {
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.album-info {
+    flex: 1;
+}
+
+.album-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.album-artist, .album-genre, .album-release-date {
+    font-size: 14px;
+    margin: 3px 0;
+    color: #555;
+}
+
+.album-description {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #333;
+    line-height: 1.5;
+}
+
+.ratings {
+    font-size: 14px;
+    color: #FFA500;
+    margin: 5px 0;
+}
+
+.promo {
+    background-color: #FFD700;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.listen-now {
+    padding: 10px 20px;
+    background-color: #5A4A3B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+    align-self: center; /* Ensures proper alignment with the other content */
+    white-space: nowrap;
+}
+
+.listen-now:hover {
+    background-color: #7A6552;
+    transform: scale(1.05);
+}
+
+
+.album-item:hover {
+    transform: translateY(-3px);
+    background-color: #e6e0d4;
+}
+
+.album-cover {
+    margin-top: 15px;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.album-info {
+    flex: 1;
+}
+
+.album-title {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #4e433f;
+}
+
+.album-artist,
+.album-genre,
+.album-release-date {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.listen-now {
+    padding: 10px 20px;
+    background-color:green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start;
+    white-space: nowrap;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-left: 0px; /* Moves the button 10px to the left */
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+
+.listen-now:hover {
+    background-color: #333;
+}
+
+footer {
+  background-color: #617dff; 
+  color: #fff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap; /* Make it responsive */
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-about,
+.footer-links,
+.footer-social {
+  flex: 1;
+  min-width: 200px; /* Ensures proper spacing on small screens */
+}
+
+.footer-about p,
+.footer-links ul,
+.footer-social h4 {
+  margin-bottom: 15px;
+}
+
+.footer-about img {
+  width: 100px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 15px; /* Space between the text and logo */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  transition: transform 0.3s, opacity 0.3s; /* Smooth hover effect */
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #FFD700; /* Highlight on hover */
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social a img {
+  width: 25px;
+  height: 25px;
+   /* filter: invert(100%); Ensures icons are visible on dark background */
+  transition: transform 0.3s;
+}
+
+.footer-social a:hover img {
+  transform: scale(1.2); /* Enlarge on hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
