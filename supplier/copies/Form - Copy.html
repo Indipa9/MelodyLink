@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Product Dashboard</title>  
+  <link rel="stylesheet" href="styles3.css">
+</head>
+
+<body>
+  <div class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header>
+      <h1>Music Product Dashboard</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">My Supplies</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="mb-6">
+          <h2 class="text-xl font-semibold">Add New Product</h2>
+        </div>
+
+        <!-- Add Product Form -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <form action="index.php" method="POST">
+            <div>
+              <label for="product-name">Product Name</label>
+              <input type="text" name="name" id="product-name" placeholder="Enter product name">
+            </div>
+            <div>
+              <label for="category">Quantity</label>
+              <input type="number" name="quantity" id="Quantity" placeholder="Enter Quantity">
+            </div>
+            <div>
+              <label for="category">Category</label>
+              <input type="text" name="category" id="category" placeholder="Enter category">
+            </div>
+            <div>
+              <label for="price">Price</label>
+              <input type="number" name="price" id="price" placeholder="Enter price">
+            </div>
+            <div class="flex justify-between">
+              <button type="submit">Add Product</button>
+              <a href="My Supplies.html">
+                <button type="button">Cancel</button>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2023 Music Product Dashboard. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
