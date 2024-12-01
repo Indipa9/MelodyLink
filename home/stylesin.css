@@ -38,15 +38,12 @@ body {
     font-size: 24px;
     font-weight: bold;
     color: #ffffff;
-    margin-left: -680px;
+    margin-left: 80px;
     align-items: left;
     font-family: "The Season";
     font-size: 25px;
+    position: absolute;
 }
-
-
-
-
 
 .nav-links {
     list-style: none;
@@ -80,7 +77,7 @@ body {
     align-items: center;
     text-align: center;
     color: #fff;
-    background-color: #aea48b;
+    background-color: white;
     z-index: 2;
 }
 
@@ -220,7 +217,7 @@ body {
     object-fit: cover;
 }
 
-/* Container Styles */
+/* artist & music section */
 .container {
     display: flex;
     width: 100%;
@@ -261,7 +258,9 @@ body {
     justify-content: left;
     background-color: #a0b0f4;
     padding-right: 30px;
+
 }
+
 
 .left-section2 img {
     width: 100%;
@@ -283,12 +282,22 @@ body {
     padding: 50px;
     border-radius: 10px;
 }
-
-.content h1 {
+.right-section2 .content h1 {
+    text-align: center;
     font-size: 60px;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     font-weight: bold;
     color: #ffffff;
+    font-family: 'The Seasons';
+}
+.content h1 {
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'The Seasons';
 }
 
 .content p {
@@ -324,11 +333,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: #617dff;
+    background: #9baeff;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #D4C5B9;
+    background: white;
     border-radius: 5px;
 }
 
@@ -411,7 +420,8 @@ body {
     line-height: 1.1;
     margin-bottom: 30px;
     animation: slideUp 1s ease-out;
-    color:#000000
+    color:#000000;
+    font-family: 'The Seasons';
 }
 
 .gradient-text {
@@ -651,11 +661,13 @@ body {
     justify-content: space-between;
     align-items: center;
     color:#000000;
+
 }
 
 .header-content h2 {
     font-size: 3rem;
     line-height: 1.2;
+    font-family: 'The Seasons';
 }
 
 .outline-button {

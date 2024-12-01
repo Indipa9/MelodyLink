@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: white;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #617dff;
+    border-bottom: 2px solid #ccc;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.logo h1 {
+    font-family:'Higuen Elegant Serif';
+    margin-left: 10px;
+    font-size: 24px;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e6d9c3;
+    font-size: 18px;
+}
+
+.profile-icon img {
+    width: 50px;
+    height: auto;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-bar input {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: #a5b4f8;
+    border: none;
+    border-radius: 0 5px 5px 0;
+}
+
+.search-bar button img {
+    width: 20px;
+    height: auto;
+}
+
+.album-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    width: 95%;
+    }
+
+.card {
+    background-color: #f7f2e7;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    width: 250px;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card h3 {
+    margin: 10px 0 5px;
+}
+
+.card p {
+    color: #777;
+    font-size: 14px;
+}
+
+.music-icon {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+}
+
+.music-icon img {
+    width: 20px;
+    height: auto;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #617dff; 
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Make it responsive */
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-about,
+  .footer-links,
+  .footer-social {
+    flex: 1;
+    min-width: 200px; /* Ensures proper spacing on small screens */
+  }
+  
+  .footer-about p,
+  .footer-links ul,
+  .footer-social h4 {
+    margin-bottom: 15px;
+  }
+  
+  .footer-about img {
+    width: 100px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 15px; /* Space between the text and logo */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+    transition: transform 0.3s, opacity 0.3s; /* Smooth hover effect */
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #FFD700; /* Highlight on hover */
+  }
+  
+  .footer-social .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-social a img {
+    width: 25px;
+    height: 25px;
+     /* filter: invert(100%); Ensures icons are visible on dark background */
+    transition: transform 0.3s;
+  }
+  
+  .footer-social a:hover img {
+    transform: scale(1.2); /* Enlarge on hover */
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+  }
+
