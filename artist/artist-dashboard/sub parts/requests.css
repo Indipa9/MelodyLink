@@ -1,0 +1,257 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  .header {
+    background-color: #617dff;
+    color: #fff;
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  
+  
+  .header .logo img {
+      width: 50px;
+      height: auto;
+  }
+  
+  .header .logo h1 {
+      font-family:'Higuen Elegant Serif';
+      margin-left: 10px;
+      font-size: 24px;
+      color: #fff;
+  }
+    
+  .header .logo {
+      display: flex;
+      align-items: center;
+  }
+  .header .profile-icon img {
+      width: 50px;
+      height: auto;
+  }
+  .navbar a {
+      margin: 0 1rem;
+      color: #fff;
+      text-decoration: none;
+      font-size: 19px;
+  }
+  
+  .navbar a:hover {
+      text-decoration: underline;
+    }
+  
+main {
+padding: 20px;
+}
+
+.invitations-container {
+background-color: white;
+border-radius: 8px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+padding: 20px;
+}
+
+.tabs {
+display: flex;
+border-bottom: 2px solid #e0e0e0;
+margin-bottom: 10px;
+}
+
+.tab {
+padding: 10px 20px;
+background: none;
+border: none;
+font-size: 1rem;
+cursor: pointer;
+}
+
+.tab.active {
+color: #28a745;
+border-bottom: 2px solid #28a745;
+font-weight: bold;
+}
+
+.section {
+display: block;
+}
+
+.section.hidden {
+display: none;
+}
+
+.invitations-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.invitations-header h2 {
+margin: 0;
+}
+
+.see-all {
+text-decoration: none;
+color: #007bff;
+}
+
+.invitations-list {
+margin-top: 10px;
+}
+
+.invitation-card {
+display: flex;
+align-items: center;
+padding: 10px;
+background-color: #e7f3ff;
+border-radius: 8px;
+margin-bottom: 10px;
+}
+
+.profile-pic {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+margin-right: 15px;
+object-fit: cover;
+}
+
+.invitation-details {
+flex: 1;
+}
+
+.name {
+font-weight: bold;
+}
+
+.info {
+color: #666;
+margin: 5px 0;
+}
+
+.mutual {
+color: #999;
+font-size: 0.9rem;
+}
+
+.actions {
+display: flex;
+gap: 10px;
+}
+
+button {
+padding: 5px 15px;
+border-radius: 4px;
+font-size: 0.9rem;
+cursor: pointer;
+border: none;
+}
+
+.ignore {
+background-color: #f8d7da;
+color: #d9534f;
+}
+
+.accept {
+background-color: #d4edda;
+color: #28a745;
+}
+
+.delete {
+    background-color: #f8d7da;
+    color: #d9534f;
+  }
+  
+  .view {
+    background-color: #cce5ff;
+    color: #004085;
+  }
+  
+  /* Footer Styling */
+footer {
+    background-color: #617dff; 
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Make it responsive */
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-about,
+  .footer-links,
+  .footer-social {
+    flex: 1;
+    min-width: 200px; /* Ensures proper spacing on small screens */
+  }
+  
+  .footer-about p,
+  .footer-links ul,
+  .footer-social h4 {
+    margin-bottom: 15px;
+  }
+  
+  .footer-about img {
+    width: 100px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 15px; /* Space between the text and logo */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+    transition: transform 0.3s, opacity 0.3s; /* Smooth hover effect */
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #FFD700; /* Highlight on hover */
+  }
+  
+  .footer-social .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-social a img {
+    width: 25px;
+    height: 25px;
+     /* filter: invert(100%); Ensures icons are visible on dark background */
+    transition: transform 0.3s;
+  }
+  
+  .footer-social a:hover img {
+    transform: scale(1.2); /* Enlarge on hover */
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+  }
+  

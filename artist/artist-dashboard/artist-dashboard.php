@@ -100,11 +100,11 @@ $albums = getAlbumsForArtist($conn);
     }
   </script>
     <nav class="navbar">
-      <a href="dashboard.php">Home</a>
-      <a href="communities.php">Communities</a>
-      <a href="Requests.php">Requests</a>
-      <a href="Reviews.php">Reviews & Ratings</a>
-      <a href="logout.php" class="logout">Logout</a>
+      <a href="../../home/Landingpage.html">Home</a>
+      <a href="sub parts/Communities.html">Communities</a>
+      <a href="sub parts/Requests.html">Requests</a>
+      <a href="#">Reviews & Ratings</a>
+      <a href="#" class="logout">Logout</a>
     </nav>
     <div class="profile-icon">
       <a href="artist_profile.html">

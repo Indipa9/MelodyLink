@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MelodyLink Communities</title>
+  <link rel="stylesheet" href="communities.css?v=1.1">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="logo.png" alt="MelodyLink Logo">
+      <h1>MelodyLink</h1>
+    </div>
+    <nav class="navbar">
+      <a href="../artist-dashboard.php">Dashboard</a>
+      <a href="Communities.html">Communities</a>
+      <a href="Requests.html">Requests</a>
+      <a href="#">Reviews & Ratings</a>
+      <a href="#" class="logout">Logout</a>
+    </nav>
+    <div class="profile-icon">
+      <a href="../artist_profile.html">
+          <img src="profile-icon.png" alt="Profile Icon">
+      </a>
+  </div>
+  </header>
+  <div class="container">
+    <div class="communities">
+      <h1>MelodyLink Communities</h1>
+      <button class="create-group-btn">Create Group</button>
+    </div>
+    <div class="tabs">
+      <button class="tab-button active" data-tab="joined">Your Communities</button>
+      <button class="tab-button" data-tab="requested">Requested</button>
+    </div>
+    <div class="content">
+      <!-- Joined Communities -->
+      <div id="joined" class="tab-content active">
+        <div class="community">
+          <img src="community1.png" alt="Community Logo">
+          <div class="details">
+            <h3>Bathiya & Santhush Fan Club (BNS Fans)</h3>
+            <p>903 members</p>
+          </div>
+          <button class="leave-btn">Leave</button>
+        </div>
+        <div class="community">
+          <img src="community1.png" alt="Community Logo">
+          <div class="details">
+            <h3>Sri Lankan Cultural Musicians Network</h3>
+            <p>2,830 members</p>
+          </div>
+          <button class="leave-btn">Leave</button>
+        </div>
+        <div class="community">
+          <img src="community1.png" alt="Community Logo">
+          <div class="details">
+            <h3>Kasun Kalhara Devotees</h3>
+            <p>1,903 members</p>
+          </div>
+          <button class="leave-btn">Leave</button>
+        </div>
+        <div class="community">
+          <img src="community1.png" alt="Community Logo">
+          <div class="details">
+            <h3>Lakshman Wijesekera Legacy Fans</h3>
+            <p>503 members</p>
+          </div>
+          <button class="leave-btn">Leave</button>
+        </div>
+        <div class="community">
+          <img src="community1.png" alt="Community Logo">
+          <div class="details">
+            <h3>Dushyanth Weeraman Fanatics</h3>
+            <p>900 members</p>
+          </div>
+          <button class="leave-btn">Leave</button>
+        </div>
+        <!-- Add more communities as needed -->
+      </div>
+
+      <!-- Requested Communities -->
+      <div id="requested" class="tab-content">
+        <p class="info-text">
+          To help you focus on the best communities for you, we limit your total number of pending requests to join. <a href="#">Learn More</a>
+        </p>
+        <div class="community">
+          <img src="community1.png" alt="Community Logo">
+          <div class="details">
+            <h3>Colombo Artists and Performers</h3>
+            <p>3,719 members</p>
+          </div>
+          <button class="withdraw-btn">Withdraw</button>
+        </div>
+        <div class="community">
+          <img src="community1.png" alt="Community Logo">
+          <div class="details">
+            <h3>Umaria Sinhawansa Official Fans</h3>
+            <p>5,459 members</p>
+          </div>
+          <button class="withdraw-btn">Withdraw</button>
+        </div>
+        <!-- Add more requested communities as needed -->
+      </div>
+    </div>
+  </div>
+  <script src="communities.js"></script>
+  <footer>
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-about">
+            <h4>About MelodyLink</h4>
+            <p>MelodyLink is an innovative web application designed to revolutionize theway we engage with music by offering a comprehensive, all-in-one platformfor artists, fans, event organizers, merchandise vendors and eventequipment renters.</p>
+            <img src="logo.png" alt="MelodyLink Logo">
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#artists">Music</a></li>
+                <li><a href="#artists">Artists</a></li>
+                <li><a href="#albums">Events</a></li>
+                <li><a href="#genres">Store</a></li>
+                <li><a href="#artists">Communities</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+        
+        <!-- Social Media Section -->
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright Section -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 MelodyLink. All Rights Reserved.</p>
+    </div>
+</footer> 
+</body>
+</html>

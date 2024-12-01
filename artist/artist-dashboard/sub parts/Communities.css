@@ -1,0 +1,273 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 900px;
+  max-height: 1000px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.header {
+  background-color: #617dff;
+  color: #fff;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+
+.header .logo img {
+    width: 50px;
+    height: auto;
+}
+
+.header .logo h1 {
+    font-family:'Higuen Elegant Serif';
+    margin-left: 10px;
+    font-size: 24px;
+    color: #fff;
+}
+  
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+.header .profile-icon img {
+    width: 50px;
+    height: auto;
+}
+.navbar a {
+    margin: 0 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+  }
+
+.communities {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.communities h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.create-group-btn {
+  padding: 8px 16px;
+  background: #0073b1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.create-group-btn:hover {
+  background: #005a8c;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  border: none;
+  background: #f8f9fa;
+  cursor: pointer;
+  outline: none;
+}
+
+.tab-button.active {
+  background: white;
+  border-bottom: 3px solid #0073b1;
+  color: #0073b1;
+}
+
+.content {
+  padding: 20px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.community {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.community img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.details {
+  flex: 1;
+}
+
+.details h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.details p {
+  margin: 5px 0 0;
+  color: #666;
+}
+
+.menu-btn, .join-btn {
+  padding: 6px 12px;
+  background: #0073b1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.menu-btn:hover, .join-btn:hover {
+  background: #005a8c;
+}
+/* Add common button styles */
+.leave-btn, .withdraw-btn {
+  padding: 6px 12px;
+  background: white;
+  color: #fa6977;
+  border: 1px solid #fa6977;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.leave-btn:hover, .withdraw-btn:hover {
+  background: #0073b1;
+  color: white;
+}
+
+/* Info text in the Requested section */
+.info-text {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.info-text a {
+  color: #0073b1;
+  text-decoration: none;
+}
+
+.info-text a:hover {
+  text-decoration: underline;
+}
+/* Footer Styling */
+footer {
+  background-color: #617dff; 
+  color: #fff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap; /* Make it responsive */
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-about,
+.footer-links,
+.footer-social {
+  flex: 1;
+  min-width: 200px; /* Ensures proper spacing on small screens */
+}
+
+.footer-about p,
+.footer-links ul,
+.footer-social h4 {
+  margin-bottom: 15px;
+}
+
+.footer-about img {
+  width: 100px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 15px; /* Space between the text and logo */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  transition: transform 0.3s, opacity 0.3s; /* Smooth hover effect */
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #FFD700; /* Highlight on hover */
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social a img {
+  width: 25px;
+  height: 25px;
+   /* filter: invert(100%); Ensures icons are visible on dark background */
+  transition: transform 0.3s;
+}
+
+.footer-social a:hover img {
+  transform: scale(1.2); /* Enlarge on hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+  
