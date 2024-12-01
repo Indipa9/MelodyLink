@@ -29,16 +29,18 @@ if (!empty($id)) {
       <h1>MelodyLink</h1>
     </div>
 <nav class="navbar">
-      <a href="dashboard.php">Home</a>
-      <a href="communities.php">Dashboard</a>
-      <a href="Requests.php">Pricing</a>
-      <a href="Requests.php">Orders</a>
+      <a href="home.html">Home</a>
+      <a href="My Supplies.php">Dashboard</a>
+      <a href="Pricing.html">Pricing</a>
+      <a href="Orders.html">Orders</a>
       <a href="logout.php" class="logout">Logout</a>
     </nav>
     <div class="profile-icon">
+        <a href="profile.html">
       <img src="./uploads/profile2.png" alt="Profile Icon">
+</a>
   </div>
-  </header>
+</header>
 
     <main>
         <!-- Dashboard Section -->
@@ -151,7 +153,7 @@ if (!empty($id)) {
         </div>
     </main>
 
-    <footer>
+<footer>
   <div class="footer-container">
     <div class="footer-about">
       <h3>About MelodyLink</h3>
@@ -175,10 +177,10 @@ if (!empty($id)) {
     <div class="footer-social">
       <h3>Follow Us</h3>
       <div class="social-icons">
-        <a href="#"><img src="path-to-facebook-icon.png" alt="Facebook"></a>
-        <a href="#"><img src="path-to-twitter-icon.png" alt="Twitter"></a>
-        <a href="#"><img src="path-to-instagram-icon.png" alt="Instagram"></a>
-        <a href="#"><img src="path-to-youtube-icon.png" alt="YouTube"></a>
+        <a href="#"><img src="./uploads/fb.jpg" alt="Facebook"></a>
+        <a href="#"><img src="./uploads/tw.jpg" alt="Twitter"></a>
+        <a href="#"><img src="./uploads/inst.jpg" alt="Instagram"></a>
+        <a href="#"><img src="./uploads/yt.jpg" alt="YouTube"></a>
       </div>
     </div>
   </div>

@@ -10,37 +10,57 @@
   }
 
   /* Header styles */
-  header {
-    background-color: #1e40af;
+  .header {
+    background-color: #617dff;
     color: #fff;
-    padding: 1rem;
+    padding: 0.5rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-shrink: 0;
+  }
+  
+  
+  .header .logo img {
+      width: 50px;
+      height: auto;
+  }
+  
+  .header .logo h1 {
+      font-family:'Higuen Elegant Serif';
+      margin-left: 10px;
+      font-size: 24px;
+      color: #fff;
+  }
+    
+  .header .logo {
+      display: flex;
+      align-items: center;
+  }
+  .header .profile-icon img {
+      width: 50px;
+      height: auto;
+  }
+  .navbar a {
+      margin: 0 1rem;
+      color: #fff;
+      text-decoration: none;
+      font-size: 19px;
+  }
+  
+  .navbar a:hover {
+      text-decoration: underline;
+  }
+  
+  .profile-icon{
+    cursor: pointer;
   }
 
-  header h1 {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
 
-  nav ul {
-    display: flex;
-    list-style-type: none;
-  }
 
-  nav ul li {
-    margin-right: 1rem;
-  }
 
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
 
-  nav ul li a:hover {
-    text-decoration: underline;
-  }
+
 
   /* Main content styles */
   main {

@@ -105,17 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </style>
 </head>
 <body>
-    <header>
-        <h1>Music Product Dashboard</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">My Supplies</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Logout</a></li>
-            </ul>
-        </nav>
-    </header>
+
 
     <main>
         <div class="container">
@@ -193,8 +183,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Music Product Dashboard. All rights reserved.</p>
-    </footer>
 </body>
 </html>
