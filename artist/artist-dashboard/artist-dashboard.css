@@ -9,11 +9,14 @@ body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #B9B096;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .header {
-  background: #333;
+  background-color: #617dff;
   color: #fff;
   padding: 0.5rem 2rem;
   display: flex;
@@ -53,10 +56,6 @@ body {
 .navbar a:hover {
     text-decoration: underline;
   }
-.header .profile-icon img {
-    width: 50px;
-    height: auto;
-}
 
 .main-container {
   flex: 1;
@@ -72,12 +71,48 @@ body {
   gap: 2rem;
 }
 
+.stat-item2 {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  height: 400px;
+  width: 550px;
+}
 .stat-item {
   background: #f4f4f4;
   padding: 1rem;
   border-radius: 5px;
   text-align: center;
+  height: 400px;
+  width: 550px;
 }
+.stat-item2 .graph {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  display: block; 
+  height: 350px;
+  width: 500px;
+}
+
+.checkbox-group {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.checkbox-group label {
+  margin: 0 0.5rem;
+  font-size: 0.9rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+}
+
 
 .published-songs {
   margin-top: 2rem;
@@ -122,31 +157,21 @@ body {
 }
 
 .event-actions .edit-btn {
-  background: #4CAF50;
+  background: #a6b5f7;
   color: #fff;
 }
 
 .event-actions .delete-btn {
-  background: #f44336;
+  background: #f1665c;
   color: #fff;
 }
 
-footer {
-  position:relative;
-  left: 0;
-  bottom: -65px;
-  background-color: #333;
-  text-align: center;
-  padding: 10px 0;
-  color: #fff;
-  flex-shrink: 0;
-  width: 100%;
-}
+
 .add-new-btn {
 position: absolute;
-top: 130px;
+top: 105px;
 right: 15px;
-background-color: #4CAF50;
+background-color: #8b9ff8;
 color: white;
 border: none;
 padding: 10px 20px;
@@ -156,7 +181,7 @@ font-size: 16px;
 }
 
 .add-new-btn:hover {
-background-color: #45a049;
+background-color: #a6b5f7;
 }
 /* Small Modal Overlay */
 .small-modal-overlay {
@@ -225,20 +250,224 @@ cursor: pointer;
 }
 
 .close-btn {
-background-color: #f44336;
+background-color: #fa6977;
 color: white;
 }
 
 .close-btn:hover {
-background-color: #e53935;
+background-color: #fa6977;
 }
 
 .add-btn {
-background-color: #4CAF50;
+background-color: #a6b5f7;
 color: white;
 }
 
 .add-btn:hover {
-background-color: #45a049;
+background-color: #a6b5f7;
 }
 
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.albums-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.albums-table th,
+.albums-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  
+}
+
+.albums-table th {
+  background-color: #a6b5f7;
+  font-weight: 600;
+  color: #333;
+}
+
+.albums-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.album-thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background-color: #a6b5f7;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #fa6977;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #a6b5f7;
+}
+
+.delete-btn:hover {
+  background-color: #fa6977;
+}
+/* Footer Styling */
+footer {
+  background-color: #617dff; 
+  color: #fff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap; /* Make it responsive */
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-about,
+.footer-links,
+.footer-social {
+  flex: 1;
+  min-width: 200px; /* Ensures proper spacing on small screens */
+}
+
+.footer-about p,
+.footer-links ul,
+.footer-social h4 {
+  margin-bottom: 15px;
+}
+
+.footer-about img {
+  width: 100px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 15px; /* Space between the text and logo */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  transition: transform 0.3s, opacity 0.3s; /* Smooth hover effect */
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #FFD700; /* Highlight on hover */
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social a img {
+  width: 25px;
+  height: 25px;
+   /* filter: invert(100%); Ensures icons are visible on dark background */
+  transition: transform 0.3s;
+}
+
+.footer-social a:hover img {
+  transform: scale(1.2); /* Enlarge on hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .albums-table {
+    font-size: 14px;
+  }
+  
+  .albums-table th,
+  .albums-table td {
+    padding: 10px;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .album-thumbnail {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #b3bff5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+.form-actions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.submit-btn {
+    background-color: #a6b5f7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #a6b5f7;
+}
