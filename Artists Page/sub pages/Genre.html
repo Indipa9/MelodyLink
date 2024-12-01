@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genres</title>
+    <link rel="stylesheet" href="genre.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+          <img src="logo.png" alt="MelodyLink Logo">
+          <h1>MelodyLink</h1>
+        </div>
+        <nav class="navbar">
+          <a href="#">Home</a>
+          <a href="#">A-Z</a>
+          <a href="#">Most Popular</a>
+          <a href="#">New Releases</a>
+          <a href="Genre.html" >Genre</a>
+          <a href="#">Communities</a>
+        </nav>
+        <div class="profile-icon">
+          <a href="../artist_profile.html">
+              <img src="profile-icon.png" alt="Profile Icon">
+          </a>
+      </div>
+      </header>
+    <main>
+        <div class="genre-grid">
+            <div class="genre-box" data-genre="Electronic" onclick="showArtists('Electronic')" style="background-color: #7ad4f7;">Electronic</div>
+            <div class="genre-box" data-genre="Pop" onclick="showArtists('Pop')" style="background-color: #7ecdf2;">Pop</div>
+            <div class="genre-box" data-genre="Metal" onclick="showArtists('Metal')" style="background-color: #a3a8e6;">Metal</div>
+            <div class="genre-box" data-genre="Punk" onclick="showArtists('Punk')" style="background-color: #b592ce;">Punk</div>
+            <div class="genre-box" data-genre="Latin" onclick="showArtists('Latin')" style="background-color: #f798a7;">Latin</div>
+            <div class="genre-box" data-genre="Hip Hop" onclick="showArtists('Hip Hop')" style="background-color: #88d4ce;">Hip Hop</div>
+            <div class="genre-box" data-genre="Rock" onclick="showArtists('Rock')" style="background-color: #9eb6e5;">Rock</div>
+            <div class="genre-box" data-genre="Country" onclick="showArtists('Country')" style="background-color: #f1a0d1;">Country</div>
+            <div class="genre-box" data-genre="European" onclick="showArtists('European')" style="background-color: #f5b097;">European</div>
+            <div class="genre-box" data-genre="Blues" onclick="showArtists('Blues')" style="background-color:  #7cc998;">Blues</div>
+            <div class="genre-box" data-genre="Classical" onclick="showArtists('Classical')" style="background-color: #c2e69a;">Classical</div>
+            <div class="genre-box" data-genre="Middle Eastern" onclick="showArtists('Middle Eastern')" style="background-color: #f4ef99;">Middle Eastern</div>
+            <div class="genre-box" data-genre="Asian" onclick="showArtists('Asian')" style="background-color: #f9cc90;">Asian</div>
+            <div class="genre-box" data-genre="R&B" onclick="showArtists('R&B')" style="background-color: #97d4b4;">R&B</div>
+            <div class="genre-box" data-genre="Jazz" onclick="showArtists('Jazz')" style="background-color: #b5d796;">Jazz</div>
+            <div class="genre-box" data-genre="Religious" onclick="showArtists('Religious')" style="background-color: #f9e385;">Religious</div>
+            <div class="genre-box" data-genre="African" onclick="showArtists('African')" style="background-color: #f9e56e;">African</div>
+            <div class="genre-box" data-genre="Reggae" onclick="showArtists('Reggae')" style="background-color: #f7d06c;">Reggae</div>
+        </div>
+        <div id="artist-list" class="artist-list">
+            <h2>Artists</h2>
+            <ul id="artists"></ul>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-about">
+                <h4>About MelodyLink</h4>
+                <p>MelodyLink is an innovative web application designed to revolutionize theway we engage with music by offering a comprehensive, all-in-one platformfor artists, fans, event organizers, merchandise vendors and eventequipment renters.</p>
+                <img src="logo.png" alt="MelodyLink Logo">
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#artists">Music</a></li>
+                    <li><a href="#artists">Artists</a></li>
+                    <li><a href="#albums">Events</a></li>
+                    <li><a href="#genres">Store</a></li>
+                    <li><a href="#artists">Communities</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <!-- Social Media Section -->
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 MelodyLink. All Rights Reserved.</p>
+        </div>
+    </footer> 
+    <script src="genre.js"></script>
+</body>
+</html>
