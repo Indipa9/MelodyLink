@@ -134,5 +134,88 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </form>
 </div>
 
+<script>
+document.getElementById('album-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const albumName = document.getElementById('album_name').value.trim();
+    const releaseDate = document.getElementById('release_date').value;
+    const genre = document.getElementById('genre').value;
+    const artistName = document.getElementById('artist_name').value.trim();
+    const artistId = document.getElementById('artist_id').value.trim();
+    const albumCover = document.getElementById('album_cover');
+    const musicTrack = document.getElementById('music_track');
+
+    let isValid = true;
+    const errors = [];
+
+    // Album name validation
+    if (albumName.length < 1 || albumName.length > 100) {
+        errors.push('Album name must be between 1 and 100 characters');
+        isValid = false;
+    }
+
+    // Release date validation
+    const currentDate = new Date();
+    const selectedDate = new Date(releaseDate);
+    if (!releaseDate || selectedDate > currentDate) {
+        errors.push('Please select a valid release date');
+        isValid = false;
+    }
+
+    // Genre validation
+    const validGenres = ['Pop', 'Sri Lankan Classical', 'Rock', 'Indian Classical', 'Metal', 'Hip Hop', 'Rhythm and Blues'];
+    if (!validGenres.includes(genre)) {
+        errors.push('Please select a valid genre');
+        isValid = false;
+    }
+
+    // Artist name validation
+    if (artistName.length < 1 || artistName.length > 100) {
+        errors.push('Artist name must be between 1 and 100 characters');
+        isValid = false;
+    }
+
+    // Artist ID validation
+    if (!/^\d+$/.test(artistId)) {
+        errors.push('Artist ID must contain only numbers');
+        isValid = false;
+    }
+
+    // // File validations
+    // if (albumCover.files.length > 0) {
+    //     const validImageTypes = ['image/jpeg', 'image/png', 'image/jpg'];
+    //     if (!validImageTypes.includes(albumCover.files[0].type)) {
+    //         errors.push('Please select a valid image file (JPEG, PNG, or JPG)');
+    //         isValid = false;
+    //     }
+    //     if (albumCover.files[0].size > 5242880) { // 5MB limit
+    //         errors.push('Album cover image must be less than 5MB');
+    //         isValid = false;
+    //     }
+    // }
+
+    // if (musicTrack.files.length > 0) {
+    //     const validAudioTypes = ['audio/mp3', 'audio/wav', 'audio/aac', 'audio/flac', 'audio/x-m4a'];
+    //     if (!validAudioTypes.includes(musicTrack.files[0].type)) {
+    //         errors.push('Please select a valid audio file (MP3, WAV, AAC, FLAC, or ALAC)');
+    //         isValid = false;
+    //     }
+    //     if (musicTrack.files[0].size > 20971520) { // 20MB limit
+    //         errors.push('Music track must be less than 20MB');
+    //         isValid = false;
+    //     }
+    // }
+
+    if (!isValid) {
+        const errorMessage = errors.join('\n');
+        alert(errorMessage);
+    } else {
+        this.submit();
+    }
+});
+</script>
+
+
 </body>
 </html>
