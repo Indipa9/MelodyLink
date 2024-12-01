@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitation Management</title>
+  <link rel="stylesheet" href="requests.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+          <img src="logo.png" alt="MelodyLink Logo">
+          <h1>MelodyLink</h1>
+        </div>
+        <nav class="navbar">
+            <a href="../artist-dashboard.php">Dashboard</a>
+            <a href="Communities.html">Communities</a>
+            <a href="Requests.html">Requests</a>
+            <a href="#">Reviews & Ratings</a>
+            <a href="#" class="logout">Logout</a>
+          </nav>
+          <div class="profile-icon">
+            <a href="../artist_profile.html">
+                <img src="profile-icon.png" alt="Profile Icon">
+            </a>
+        </div>
+    </header>
+  
+   <main>
+    <div class="invitations-container">
+      <!-- Tabs for navigation -->
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab('grow')">New</button>
+        <button class="tab" onclick="switchTab('catch-up')">Old</button>
+      </div>
+
+      <!-- Grow Section -->
+      <div class="section" id="grow-section">
+        <div class="invitations-header">
+          <h2>Requests (2 new)</h2>
+          <a href="#" class="see-all">See all 8</a>
+        </div>
+        <div class="invitations-list">
+          <div class="invitation-card">
+            <img src="user1.jpg" alt="User 1" class="profile-pic">
+            <div class="invitation-details">
+              <p class="name">Thenujaya Perera</p>
+              <p class="info">Private Event Performance Request</p>
+              <p class="mutual">30/11/2024</p>
+            </div>
+            <div class="actions">
+              <button class="ignore">Ignore</button>
+              <button class="accept">Accept</button>
+            </div>
+          </div>
+          <div class="invitation-card">
+            <img src="user1.jpg" alt="User 2" class="profile-pic">
+            <div class="invitation-details">
+              <p class="name">Santhosh Naarayanan</p>
+              <p class="info">Fan Request for a Virtual Concert</p>
+              <p class="mutual">01/12/2024</p>
+            </div>
+            <div class="actions">
+              <button class="ignore">Ignore</button>
+              <button class="accept">Accept</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Catch Up Section -->
+      <div class="section hidden" id="catch-up-section">
+        <div class="invitations-header">
+          <h2>Old Requests</h2>
+        </div>
+        <div class="invitations-list">
+          <div class="invitation-card">
+            <img src="user1.jpg" alt="User 3" class="profile-pic">
+            <div class="invitation-details">
+              <p class="name">Poorni Perera</p>
+              <p class="info">Collaboration for a Music Festival</p>
+              <p class="mutual">12/11/2024</p>
+            </div>
+            <div class="actions">
+                <button class="delete">Delete</button>
+                <button class="view">View</button>
+            </div>
+          </div>
+          <div class="invitation-card">
+            <img src="user1.jpg" alt="User 3" class="profile-pic">
+            <div class="invitation-details">
+              <p class="name">Poorni Perera</p>
+              <p class="info">Collaboration on a Creative Project</p>
+              <p class="mutual">12/11/2024</p>
+            </div>
+            <div class="actions">
+                <button class="delete">Delete</button>
+                <button class="view">View</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="requests.js"></script>
+  <footer>
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-about">
+            <h4>About MelodyLink</h4>
+            <p>MelodyLink is an innovative web application designed to revolutionize theway we engage with music by offering a comprehensive, all-in-one platformfor artists, fans, event organizers, merchandise vendors and eventequipment renters.</p>
+            <img src="logo.png" alt="MelodyLink Logo">
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#artists">Music</a></li>
+                <li><a href="#artists">Artists</a></li>
+                <li><a href="#albums">Events</a></li>
+                <li><a href="#genres">Store</a></li>
+                <li><a href="#artists">Communities</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+        
+        <!-- Social Media Section -->
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright Section -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 MelodyLink. All Rights Reserved.</p>
+    </div>
+</footer> 
+</body>
+</html>
