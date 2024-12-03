@@ -33,7 +33,7 @@ if (!empty($id)) {
       <a href="My Supplies.php">Dashboard</a>
       <a href="Pricing.html">Pricing</a>
       <a href="Orders.html">Orders</a>
-      <a href="logout.php" class="logout">Logout</a>
+      <a href="../dashboard/logout.php" class="logout">Logout</a>
     </nav>
     <div class="profile-icon">
         <a href="profile.html">

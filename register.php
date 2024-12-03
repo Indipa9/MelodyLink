@@ -133,8 +133,8 @@ class UserRegistration {
         // Password validation
         if (empty($userData['password'])) {
             $errors['password'] = "Password is required";
-        } elseif (strlen($userData['password']) < 6) {
-            $errors['password'] = "Password must be at least 6 characters long";
+        } elseif (strlen($userData['password']) < 8) {
+            $errors['password'] = "Password must be at least 8 characters long";
         }
 
         // Confirm password validation
@@ -263,69 +263,174 @@ $registrationHandler = new RegistrationHandler();
 $registrationHandler->handleRegistration();
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>User Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MelodyLink Registration</title>
     <style>
-        body { font-family: Arial, sans-serif; max-width: 400px; margin: 0 auto; padding: 20px; }
-        .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; margin-bottom: 5px; }
-        .form-group input, .form-group select { width: 100%; padding: 8px; }
-        .error { color: red; font-size: 0.8em; }
-        button { width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7ff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background-color: #617dff;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
 
         .container {
             background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(97, 125, 255, 0.1);
+            width: 100%;
+            max-width: 500px;
+            position: relative;
         }
+
+        .container h2 {
+            color: #617dff;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 1.2rem;
         }
+
         .form-group label {
             display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 500;
         }
-        .form-group input, 
+
+        .form-group input,
         .form-group select {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            padding: 0.8rem;
+            border: 2px solid #e1e5ff;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 1rem;
         }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #617dff;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(97, 125, 255, 0.1);
+        }
+
+        .conditional-fields {
+            background-color: #f8faff;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            border: 1px solid #e1e5ff;
+        }
+
         .error {
-            color: red;
-            font-size: 0.8em;
-            margin-top: 5px;
+            color: #ff4444;
+            font-size: 0.85rem;
+            margin-top: 0.3rem;
         }
+
         button {
             width: 100%;
-            padding: 12px;
-            background-color: #4CAF50;
+            padding: 1rem;
+            background-color: #617dff;
             color: white;
             border: none;
-            border-radius: 4px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            margin-top: 1rem;
         }
+
         button:hover {
-            background-color: #45a049;
+            background-color: #4b66ff;
         }
-        .conditional-fields {
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 4px;
-            margin-top: 10px;
+
+        .signup-link {
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+            color: #617dff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .signup-link:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background-color: #617dff;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: auto;
+        }
+
+        /* Password strength indicator */
+        .password-strength {
+            height: 4px;
+            background-color: #e1e5ff;
+            margin-top: 0.5rem;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .password-strength-bar {
+            height: 100%;
+            width: 0;
+            transition: width 0.3s ease, background-color 0.3s ease;
         }
     </style>
 </head>
 <body>
-<div class="container">
-    <form id="registrationForm" method="POST" action="register.php">
+    <header class="header">
+        <h1>MelodyLink</h1>
+    </header>
+
+    <div class="main-content">
+        <div class="container">
+            <h3><center><a href="./login/login.php">Already have an account? Login!</a></h3></center>
+            <h2>Create Your Account</h2>
+            
+            <form id="registrationForm" method="POST" action="register.php">
         <div class="form-group">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" required>
@@ -382,49 +487,170 @@ $registrationHandler->handleRegistration();
         <button type="submit">Register</button>
     </form>
 </div>
+<!-- <a href="./login/login.php" class="signup-link">Already have an account? Login</a> -->
 
-    <script>
-        document.getElementById('userType').addEventListener('change', function() {
-            // Hide all additional fields
-            document.getElementById('artistFields').style.display = 'none';
-            document.getElementById('organizerFields').style.display = 'none';
-            document.getElementById('supplierFields').style.display = 'none';
 
-            // Show appropriate fields based on user type
-            switch(this.value) {
-                case 'artist':
-                    document.getElementById('artistFields').style.display = 'block';
-                    break;
-                case 'organizer':
-                    document.getElementById('organizerFields').style.display = 'block';
-                    break;
-                case 'supplier':
-                    document.getElementById('supplierFields').style.display = 'block';
-                    break;
-            }
-        });
+<script>
+// Password validation criteria
+const passwordCriteria = {
+    minLength: 8,
+    hasUpperCase: /[A-Z]/,
+    hasLowerCase: /[a-z]/,
+    hasNumbers: /[0-9]/,
+    hasSpecialChar: /[!@#$%^&*(),.?":{}|<>]/
+};
 
-        document.getElementById('registrationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            fetch('', {
-                method: 'POST',
-                body: new FormData(this)
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === 'success') {
-                    alert(data.message);
-                    // Redirect or reset form
-                } else {
-                    // Display errors
-                    console.log(data.errors);
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        });
-    </script>
+// Add password strength indicators to password field
+document.getElementById('password').insertAdjacentHTML('afterend', `
+    <div class="password-strength">
+        <div class="password-strength-bar"></div>
+    </div>
+    <div class="password-criteria">
+        <p class="criteria length">✘ At least 8 characters</p>
+        <p class="criteria uppercase">✘ At least one uppercase letter</p>
+        <p class="criteria lowercase">✘ At least one lowercase letter</p>
+        <p class="criteria number">✘ At least one number</p>
+        <p class="criteria special">✘ At least one special character</p>
+    </div>
+`);
+
+// Add password match indicator after confirm password field
+document.getElementById('confirm_password').insertAdjacentHTML('afterend', `
+    <p class="password-match-indicator"></p>
+`);
+
+// Add styles for password validation
+const style = document.createElement('style');
+style.textContent = `
+    .password-criteria {
+        margin-top: 10px;
+        font-size: 0.85rem;
+        color: #666;
+    }
+    .criteria {
+        margin: 5px 0;
+    }
+    .criteria.valid {
+        color: #2ecc71;
+    }
+    .criteria.invalid {
+        color: #e74c3c;
+    }
+    .password-match-indicator {
+        font-size: 0.85rem;
+        margin-top: 5px;
+    }
+    .password-strength-bar {
+        height: 100%;
+        width: 0;
+        transition: width 0.3s ease, background-color 0.3s ease;
+    }
+`;
+document.head.appendChild(style);
+
+// Function to validate password strength
+function validatePassword(password) {
+    const criteria = {
+        length: password.length >= passwordCriteria.minLength,
+        uppercase: passwordCriteria.hasUpperCase.test(password),
+        lowercase: passwordCriteria.hasLowerCase.test(password),
+        number: passwordCriteria.hasNumbers.test(password),
+        special: passwordCriteria.hasSpecialChar.test(password)
+    };
+
+    // Update criteria indicators
+    document.querySelector('.criteria.length').className = 
+        `criteria length ${criteria.length ? 'valid' : 'invalid'}`;
+    document.querySelector('.criteria.uppercase').className = 
+        `criteria uppercase ${criteria.uppercase ? 'valid' : 'invalid'}`;
+    document.querySelector('.criteria.lowercase').className = 
+        `criteria lowercase ${criteria.lowercase ? 'valid' : 'invalid'}`;
+    document.querySelector('.criteria.number').className = 
+        `criteria number ${criteria.number ? 'valid' : 'invalid'}`;
+    document.querySelector('.criteria.special').className = 
+        `criteria special ${criteria.special ? 'valid' : 'invalid'}`;
+
+    // Calculate password strength
+    const strength = Object.values(criteria).filter(Boolean).length;
+    const strengthBar = document.querySelector('.password-strength-bar');
+    strengthBar.style.width = `${(strength / 5) * 100}%`;
+
+    // Set color based on strength
+    const colors = ['#e74c3c', '#e67e22', '#f1c40f', '#2ecc71', '#27ae60'];
+    strengthBar.style.backgroundColor = colors[strength - 1] || '#e74c3c';
+
+    return strength === 5; // Returns true if all criteria are met
+}
+
+// Function to check if passwords match
+function checkPasswordMatch() {
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirm_password').value;
+    const matchIndicator = document.querySelector('.password-match-indicator');
+
+    if (confirmPassword) {
+        if (password === confirmPassword) {
+            matchIndicator.textContent = '✓ Passwords match';
+            matchIndicator.style.color = '#2ecc71';
+            return true;
+        } else {
+            matchIndicator.textContent = '✘ Passwords do not match';
+            matchIndicator.style.color = '#e74c3c';
+            return false;
+        }
+    } else {
+        matchIndicator.textContent = '';
+        return false;
+    }
+}
+
+// Add event listeners
+document.getElementById('password').addEventListener('input', function() {
+    validatePassword(this.value);
+    checkPasswordMatch();
+});
+
+document.getElementById('confirm_password').addEventListener('input', checkPasswordMatch);
+
+// Update form submission to include password validation
+document.getElementById('registrationForm').addEventListener('submit', function(e) {
+    const password = document.getElementById('password').value;
+    const isPasswordValid = validatePassword(password);
+    const doPasswordsMatch = checkPasswordMatch();
+
+    if (!isPasswordValid || !doPasswordsMatch) {
+        e.preventDefault();
+        alert('Please ensure your password meets all requirements and matches the confirmation.');
+        return;
+    }
+
+    // Continue with existing form submission code
+    e.preventDefault();
+    fetch('', {
+        method: 'POST',
+        body: new FormData(this)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            alert(data.message);
+            // Redirect or reset form
+        } else {
+            // Display errors
+            console.log(data.errors);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+</script>
+
+
+
+
+
+
+
 </body>
 </html>
