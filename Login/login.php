@@ -22,9 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $tables = [
         'admin' => 'admin_id',
         'member' => 'member_id',
-        'supplier' => 'supplier_id',
-        'event_organiser' => 'organizer_id',
-        'artist' => 'Artist_id'
+        'supplier' => 'user_id',
+        'event_organiser' => 'user_id',
+        'artist' => 'user_id'
     ];
 
     $login_successful = false;
@@ -54,16 +54,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                         break;
                     case 'member':
-                        header("Location: ../Community/display_community.php");
+                        header("Location: ../dashboard/dashboard.php");
                         break;
                     case 'supplier':
                         header("Location: ../supplier/My supplies.php");
                         break;
                     case 'event_organiser':
-                        header("Location: ../org/eventm/public/index.php");
+                        header("Location: ../../../eventm/public/");
                         break;
                     case 'artist':
-                        header("Location: ../artist-dashboard/artist-dashboard.php");
+                        header("Location: ../artist/artist-dashboard/artist-dashboard.php");
                         break;
                 }
                 exit;
@@ -166,7 +166,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button type="submit" class="login-button">Login</button>
         </form>
 
-        <a href="../registration.html" class="signup-link">Don't have an account? Sign up</a>
+        <a href="../register.php" class="signup-link">Don't have an account? Sign up</a>
     </div>
 </body>
 </html>

@@ -105,7 +105,7 @@ $albums = getAlbumsForArtist($conn);
       <a href="sub parts/Communities.html">Communities</a>
       <a href="sub parts/Requests.html">Requests</a>
       <a href="#">Reviews & Ratings</a>
-      <a href="#" class="logout">Logout</a>
+      <a href="../../dashboard/logout.php" class="logout">Logout</a>
     </nav>
     <div class="profile-icon">
       <a href="artist_profile.html">
