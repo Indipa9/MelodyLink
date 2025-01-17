@@ -1,0 +1,20 @@
+.cart-item-fly {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.cart-bounce {
+    animation: cartBounce 0.5s ease-in-out;
+}
+
+@keyframes cartBounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
